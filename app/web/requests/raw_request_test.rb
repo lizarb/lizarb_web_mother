@@ -1,7 +1,7 @@
-class RootRequestTest < AppRequestTest
+class RawRequestTest < AppRequestTest
 
   test :subject_class do
-    assert subject_class == RootRequest
+    assert subject_class == RawRequest
   end
 
   test :actions, :root do

@@ -1,4 +1,4 @@
-class RootRequest < AppRequest
+class RawRequest < AppRequest
 
   # NOTE: There's a bug in this file. Can you find it?
   def self.call env
