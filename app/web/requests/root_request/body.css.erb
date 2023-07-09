@@ -1,0 +1,263 @@
+/* body.css.erb */
+
+/* BODY */
+
+body {
+  background-color: white;
+  font-family: "Rubik", sans-serif;
+  font-size: 26px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CONTAINER */
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 10px;
+  
+  position: relative; z-index: 1;
+}
+
+.container em {
+  font-style: normal;
+  color: var(--primary-red);
+}
+
+
+
+/* FLEXBOX */
+
+  .flexbox {
+    display: flex;
+    flex-wrap: nowrap;
+    /* custom screen */
+  }
+
+  .flexbox > div {
+    flex: 1;
+    /* custom screen */
+  }
+
+  .flexbox .left {
+    <%= "background-color: #999;" if @colors %>
+  }
+
+  .flexbox .right {
+    <%= "background-color: #ccc;" if @colors %>
+  }
+
+/* mobile */
+@media screen and (max-width: 1200px) {
+  .flexbox {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .flexbox > div {
+    /* vertical align top */
+    /* align-self: flex-start; */
+  }
+}
+
+/* desktop */
+@media screen and (min-width: 1200px) {
+  .flexbox {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .flexbox > div {
+    /* vertical align top */
+    align-self: flex-start;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HEADER */
+
+header {
+  <%= "background-color: red;" if @colors %>
+}
+
+/* flexbox */
+
+header .flexbox {
+  /* custom screen */
+}
+
+
+
+header .flexbox .right {
+  /* custom screen */
+}
+
+header .flexbox .right nav {
+  display: flex;
+}
+
+header .logo {
+  width: 200px;
+  height: 90px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--primary-green);
+  padding: 10px;
+  /* EXPERIMENT: maybe we only need this on desktop */
+  padding: 10px 60px;
+}
+
+/* mobile */
+@media screen and (max-width: 1200px) {
+
+  header .flexbox {
+    flex-direction: column;
+  }
+
+  header .flexbox .right {
+    align-self: stretch;
+  }
+
+  header nav {
+    justify-content: space-evenly;
+  }
+/* 
+  header nav a {
+    padding: 10px;
+  }
+*/
+
+}
+
+/* desktop */
+@media screen and (min-width: 1200px) {
+  header {
+    /* padding: 0 0 50px 0; */
+  }
+  header .flexbox {
+    flex-direction: row;
+  }
+  header .flexbox .right {
+    justify-self: center;
+  }
+
+  /* desktop header's left and right */
+  header .flexbox > div {
+    /* vertical align center */
+    align-self: center; 
+  }
+  
+  header nav{
+    justify-content: right;
+  }
+/* 
+  header nav a {
+    padding: 10px 60px;
+  }
+ */
+}
+
+/* SECTIONS */
+
+section {
+  padding: 50px 0;
+}
+
+
+
+
+
+
+/* Add a new breakpoint for small mobile devices (max-width: 400px) */
+@media screen and (max-width: 400px) {
+  body {
+    font-size: 20px;
+  }
+
+  .container {
+    padding: 5px;
+  }
+
+  header .logo {
+    width: 150px;
+    height: 68px;
+  }
+
+  header nav a {
+    padding: 5px 20px;
+  }
+
+  section {
+    padding: 25px 0;
+  }
+
+  section#project .gridbox {
+    grid-gap: 20px;
+  }
+
+  section#project .gridbox > div:nth-child(2) h1 {
+    font-size: 4rem;
+    line-height: 3rem;
+  }
+
+  section#project .gridbox > div:nth-child(2) p {
+    font-size: 1.5rem;
+  }
+
+  section#project .gridbox > div:nth-child(2) a {
+    font-size: 1.2rem;
+    padding: 5px 10px;
+  }
+
+  section#community .gridbox {
+    grid-gap: 20px;
+    padding: 0px 20px;
+  }
+
+  section#community .gridbox > div:nth-child(1) h2 {
+    font-size: 3rem;
+    line-height: 2.5rem;
+  }
+
+  section#community .gridbox > div:nth-child(1) p {
+    font-size: 1.5rem;
+  }
+
+  section#community .gridbox > div:nth-child(2) p {
+    font-size: 1.5rem;
+  }
+
+  section#docs h2 {
+    font-size: 3rem;
+    line-height: 2.5rem;
+  }
+
+  section#docs p a {
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+  }
+}
+
+
+<%= render %>

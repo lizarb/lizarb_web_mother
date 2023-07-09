@@ -1,0 +1,143 @@
+
+<section id="project">
+    <div class="container">
+        <div class="gridbox">
+            <div>
+                <img src="/images/root/terminal.png" alt="Terminal">
+            </div>
+            <div>
+                <h1><em>Ruby</em> ficou <br />mais facil</h1>
+                <p>Crie projetos MVC com <em>Ruby</em> e aprenda a ver tudo como objetos.</p>
+                <p>Desvende por que programadores <em>Ruby</em> sao os mais bem pagos, alegres e produtivos.</p>
+                <a href="/root/guide.html">Guia de projeto</a>
+                <!-- <a href="/">Try Ruby!</a> -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<div id="community-background">
+    <div>
+    </div>
+</div>
+<section id="community">
+    <div class="container">
+        <div class="gridbox">
+            <div>
+                <h2>Junte-se a <br />comunidade <br />brasileira</h2>
+                <p>Aprenda com as interacoes de pessoas reais.</p>
+                <p>Pratique <em>Ruby</em> todos os dias.</p>
+                <p>Entenda como estamos usando o ChatGPT.</p>
+                <p>Encontre os melhores cursos de programacao.</p>
+                <p>Saiba quais empresas tem vagas para voce.</p>
+            </div>
+            <div>
+                <img src="/images/root/community.png" alt="Community">
+                <p>Apoie no GitHub.</p>
+                <p>Crie seus projetos.</p>
+                <p>Leia a documentacao.</p>
+                <p>Entre no nosso canal.</p>
+                <p>Nao se avexe!<br/>Converse com a gente.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="docs">
+    <div class="container">
+        <div>
+            <h2>Documentacao Oficial Ruby 3.2</h2>
+
+			<table>
+                <% get_docs_main.each do |doc| %>
+                <tr>
+                    <td><a target="_blank" href="<%= doc[:url] %>"><%= doc[:name] %></a></td>
+                    <td><img width="32" src="/images/pdf.png" /> Guia</td>
+                    <td><img width="32" src="/images/pdf.png" /> Documentacao</td>
+                    <td><img width="32" src="/images/pdf.png" /> Completo</td>
+                    <td><%= doc[:pages] %> paginas</td>
+                </tr>
+                <% end %>
+            </table>
+        </div>
+		<div>
+			<h2>Documentacao Versoes 1.8.7 - 3.2.0</h2>
+
+			<table>
+                <% get_docs_versions.each do |doc| %>
+                <tr>
+                    <td><a target="_blank" href="<%= doc[:url] %>"><%= doc[:name] %></a></td>
+                    <td><img width="32" src="/images/pdf.png" /> Guia</td>
+                    <td><img width="32" src="/images/pdf.png" /> Documentacao</td>
+                    <td><img width="32" src="/images/pdf.png" /> Completo</td>
+                    <td><%= doc[:pages] %> paginas</td>
+                </tr>
+                <% end %>
+            </table>
+<!-- 
+                <p><a href="/">Ruby 3.2 - Caderno 0 - Iniciante</a></p>
+                <p><a href="/">Ruby 3.2 - Caderno 1 - Sintaxe</a></p>
+                <p><a href="/">Ruby 3.2 - Caderno 2 - Tipos</a></p>
+                <p><a href="/">Ruby 3.2 - Caderno 3 - Operadores</a></p>
+                <p><a href="/">Ruby 3.2 - Caderno 4 - Fluxo</a></p>
+                <p><a href="/">Ruby 3.2 - Caderno 5 - Metodos</a></p>
+                <p><a href="/">Ruby 3.2 - Caderno 6 - Classes</a></p>
+                <p><a href="/">Ruby 3.2 - Caderno 7 - Meta Programacao</a></p>
+
+                <p><a href="/">Ruby 3.2 - Liza 1.0 - Caderno 0 - LizaRB</a></p>
+                <p><a href="/">Ruby 3.2 - Liza 1.0 - Caderno 1 - App</a></p>
+                <p><a href="/">Ruby 3.2 - Liza 1.0 - Caderno 2 - Units</a></p>
+                <p><a href="/">Ruby 3.2 - Liza 1.0 - Caderno 3 - Tests</a></p>
+                <p><a href="/">Ruby 3.2 - Liza 1.0 - Caderno 4 - Settings</a></p>
+                <p><a href="/">Ruby 3.2 - Liza 1.0 - Caderno 5 - Systems</a></p>
+                 -->
+                 <p>&nbsp;</p>
+                 <p>&nbsp;</p>
+                 <p>&nbsp;</p>
+            </div>
+    </div>
+</section>
+
+
+
+<section id="">
+    <div class="container">
+        <h2>Palestras</h2>
+        
+        <table width="100%">
+            <tr>
+                <td style="text-align: center;">
+                    <%= youtube_tag "gwZbR2oyjmQ" %>
+                </td>
+                <td style="text-align: center;">
+                    <%= youtube_tag "X2sgQ38UDVY" %>
+                </td>
+                <td style="text-align: center;">
+                    <%= youtube_tag "RuGZCcEL2F8" %>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</section>
+
+<section id="">
+    <div class="container">
+
+        <p>
+            Grupos
+        </p>
+        <p><a href="<%= grupo_url %>">Facebook Ruby on Rails Brasil</a></p>
+        <p><a href="<%= grupo_url %>">Telegram Ruby Brasil</a></p>
+        <% %w[AL BA CE DF GO MG PB PR PE RJ RN RS SC SP].sort.each do |k| %>
+        <p><a href="<%= grupo_url %>">Telegram Ruby <%= k %></a></p>
+        <% end %>
+        <p><a href="<%= grupo_url %>">+ Cadastrar Seu Grupo</a></p>
+
+    </div>
+</section>
+

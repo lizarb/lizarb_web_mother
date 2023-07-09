@@ -1,0 +1,173 @@
+<section id="guide">
+    <div class="container">
+        <div class="gridbox">
+            <div>
+                <h1>Guia de projeto</h1>
+                <p>Rubistas sao diferentes. Hackers hardcore. Gostam de trabalhar em sistemas Unix atraves de ferramentas como SSH, IRB e Pry.</p>
+                <p>Eles usam Ruby para controlar outras tecnologias como SQL, NoSQL, e HTML atraves de RubyGems, geradores de codigo, e do padrao MVC.</p>
+                <p>Nessa pagina, voce vai ver como:</p>
+                <p><a href="/a.ics">https://rubyinstaller.org/</a></p>
+
+                <ul>
+                    <li>Instalar o interpretador Ruby</li>
+                    <li>Criar um projeto Ruby</li>
+                    <li>Realizar testes de performance em Ruby</li>
+                    <li>Organizar processos com Orientacao a Objetos.</li>
+                </ul>
+                
+                <p><strong>Pergunte na comunidade se algo der errado.</strong></p>
+            </div>
+            <div>
+                <img src="/logo.png" alt="logo" style="background-color: black; width: 50%;padding: 100px;">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="guide-install" class="guide-install">
+    <div class="container">
+        <div>
+            <h2>Instalando o interpretador Ruby</h2>
+            <p>Vamos instalar a versao mais moderna do interpretador Ruby.</p>
+            <p>Siga as instrucoes atentamente.</p>
+            <table>
+                <tr>
+                    <td>
+                        Windows
+                        <br/>
+                        <img src="/logo.png" alt="logo" style="background-color: black; width: 50%;padding: 100px;">
+                        <p><a href="https://rubyinstaller.org/">https://rubyinstaller.org/</a></p>
+                        <p>Criado e mantido pela equipe One-Click Project.</p>
+                        <p>O instalador nao usa linhas de comando.</p>
+                        <p><code class="block">ruby -v</code></p>
+                    </td>
+                    <td>
+                        Linux
+                        <br/>
+                        <img src="/logo.png" alt="logo" style="background-color: black; width: 50%;padding: 100px;">
+                        <p><a href="https://asdf-vm.com/">https://asdf-vm.com/</a></p>
+                        <p><code class="block">asdf plugin add ruby</code></p>
+                        <p><code class="block">asdf install ruby latest</code></p>
+                        <p><code class="block">asdf global ruby latest</code></p>
+                        <p><code class="block">ruby -v</code></p>
+                    </td>
+                    <td>
+                        Mac
+                        <br/>
+                        <img src="/logo.png" alt="logo" style="background-color: black; width: 50%;padding: 100px;">
+                        <p><a href="https://asdf-vm.com/">https://asdf-vm.com/</a></p>
+                        <p><code class="block">asdf plugin add ruby</code></p>
+                        <p><code class="block">asdf install ruby latest</code></p>
+                        <p><code class="block">asdf global ruby latest</code></p>
+                        <p><code class="block">ruby -v</code></p>
+                    </td>
+                </tr>
+            </table>
+
+
+        </div>
+    </div>
+</section>
+
+
+
+<section id="guide-item-new" class="guide-item">
+    <div class="container">
+        <div class="gridbox">
+            <div>
+                <h2>Criando um projeto Ruby</h2>
+                <p>Com o comando abaixo voce cria um projeto usando as versoes mais modernas das gems <strong>bundler</strong>, <strong>dotenv</strong> e <strong>zeitwerk</strong>.</p>
+                
+                <p>Instale:</p>
+                <p><code class="block">gem install lizarb</code></p>
+                <p>Crie:</p>
+                <p><code class="block">lizarb new app_liza</code></p>
+                <p>Seu projeto:</p>
+                <p><code class="block">cd app_liza</code></p>
+                <p><code class="block">lizarb help</code></p>
+            </div>
+            <div>
+                <img src="/logo.png" alt="logo" style="background-color: black; width: 50%;padding: 100px;">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="guide-item-bench" class="guide-item">
+    <div class="container">
+        <div class="gridbox">
+            <div>
+                <h2>Instalando o controller Bench</h2>
+                <p>O controlador Bench te ajuda a comparar metricas de execucao de codigo Ruby.</p>
+                <p>Aprenda praticando para destruir nas entrevistas.</p>
+
+                <p><code class="block">lizarb generate bench:install</code></p>
+                <p>Veja os exemplos:</p>
+                <p><code class="block">lizarb bench</code></p>
+                <p><code class="block">lizarb bench variables</code></p>
+                <p><code class="block">lizarb bench objects</code></p>
+                <p><code class="block">lizarb bench loops</code></p>
+                <p>Crie os seus:</p>
+                <p><code class="block">lizarb generate bench hello</code></p>
+                <p><code class="block">lizarb bench hello</code></p>
+            </div>
+            <div>
+                <img src="/logo.png" alt="logo" style="background-color: black; width: 50%;padding: 100px;">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="guide-item-command" class="guide-item">
+    <div class="container">
+        <div class="gridbox">
+            <div>
+                <h2>Instalando o controller Command</h2>
+                <p>O controlador Command te ajuda a organizar seus scripts Ruby e deixar seu codigo limpo.</p>
+                <p>Exercite bons habitos para dominar problemas complexos.</p>
+
+                <p><code class="block">lizarb generate command:install</code></p>
+                <p>Veja os exemplos:</p>
+                <p><code class="block">lizarb command</code></p>
+                <p><code class="block">lizarb calculator 99 + 1</code></p>
+                <p><code class="block">lizarb circle area 10</code></p>
+                <p><code class="block">lizarb quadratic 1 11 30</code></p>
+                <p>Crie os seus:</p>
+                <p><code class="block">lizarb g command hello</code></p>
+                <p><code class="block">lizarb hello</code></p>
+            </div>
+            <div>
+                <img src="/logo.png" alt="logo" style="background-color: black; width: 50%;padding: 100px;">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- 
+
+<section id="guide-item-NAME" class="guide-item">
+    <div class="container">
+        <div class="gridbox">
+            <div>
+                <h2></h2>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+            <div>
+                <img src="/logo.png" alt="logo" style="background-color: black; width: 50%;padding: 100px;">
+            </div>
+        </div>
+    </div>
+</section>
+
+-->

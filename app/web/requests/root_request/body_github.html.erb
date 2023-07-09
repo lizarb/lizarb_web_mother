@@ -1,0 +1,34 @@
+
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+<header>
+    <div class="container">
+        <div class="flexbox">
+            <div class="left">
+            </div>
+            <div class="right" style="text-align: right;">
+
+<%
+	repo_name = "rubyonrails-brasil/lizarb"
+%>
+
+<!-- Place this tag where you want the button to render. -->
+<a target="_blank" class="github-button" href="https://github.com/<%= repo_name %>/fork" data-size="large" data-show-count="true" aria-label="Fork <%= repo_name %> on GitHub">
+	Fork on GitHub
+</a>
+
+<!-- Place this tag where you want the button to render. -->
+<a target="_blank" class="github-button" href="https://github.com/<%= repo_name %>" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star <%= repo_name %> on GitHub">
+	Siga no GitHub
+</a>
+
+<a target="_blank" href="https://github.com/<%= repo_name %>"><img height="27px" src="https://github.com/<%= repo_name %>/workflows/Ruby/badge.svg" alt="[Tests Build Status]"/></a>
+
+
+
+            </div>
+        </div>
+    </div>
+</header>
