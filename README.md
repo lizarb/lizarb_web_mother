@@ -10,15 +10,15 @@ Install the gem by executing:
 
 You will get the following three shims:
 
-    lizarb version
-    liza version
-    lrb version
+    exe/lizarb version
+    exe/liza version
+    exe/lrb version
 
 ## Create a liza app
 
 So you can run your experiments:
 
-    liza new
+    exe/liza new
 
 Then enter your automagically generated liza app:
 
@@ -31,13 +31,13 @@ Now you're ready to go and try some stuff!
 
 Try Liza with an interactive terminal
 
-    liza terminal
+    exe/liza terminal
 
 ## Running Tests
 
 Run your Liza tests
 
-    liza test
+    exe/liza test
 
 ## Development
 

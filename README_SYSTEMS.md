@@ -6,13 +6,13 @@ These systems operate at a very small capacity, and will be fleshed out in the f
 
 Try Liza and build an ASCII game
 
-    liza happy axo
+    exe/liza happy axo
 
 ## Networking
 
 Try Liza to connect with Sqlite and Redis
 
-    liza net
+    exe/liza net
 
 ```ruby
 
@@ -35,7 +35,7 @@ SqliteDb.current.call "SELECT name, sql FROM sqlite_master WHERE type = 'table';
 
 Try Liza with the Rack Web Server
 
-    liza rack
+    exe/liza rack
 
 http://localhost:3000/
 
@@ -59,22 +59,22 @@ http://localhost:3000/assets/app.js
 
 Try Liza with the Rack Web Server
 
-    liza request get /
+    exe/liza request get /
 
-    liza request post /
+    exe/liza request post /
 
-    liza request get /xxxxxxx
+    exe/liza request get /xxxxxxx
 
-    liza request get /api/xxxxxxx
+    exe/liza request get /api/xxxxxxx
 
-    liza request get /api/auth/sign_up
+    exe/liza request get /api/auth/sign_up
 
-    liza request get /api/auth/sign_in
+    exe/liza request get /api/auth/sign_in
 
-    liza request get /api/auth/account
+    exe/liza request get /api/auth/account
 
-    liza request get /api/auth/sign_out
+    exe/liza request get /api/auth/sign_out
 
-    liza request get /assets/app.css
+    exe/liza request get /assets/app.css
 
-    liza request get /assets/app.js
+    exe/liza request get /assets/app.js
