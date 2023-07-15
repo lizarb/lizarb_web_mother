@@ -16,9 +16,14 @@ module Lizarb
 
   #
 
-  SPEC    = Gem::Specification.find_by_name("lizarb")
-  GEM_DIR = SPEC.gem_dir
   CUR_DIR = Dir.pwd
+  begin
+    SPEC    = Gem::Specification.find_by_name("lizarb")
+    GEM_DIR = SPEC.gem_dir
+  rescue Gem::MissingSpecError
+    SPEC    = nil
+    GEM_DIR = CUR_DIR
+  end
 
   IS_APP_DIR = File.file? "#{CUR_DIR}/app.rb"
   IS_LIZ_DIR = File.file? "#{CUR_DIR}/lib/lizarb.rb"
@@ -94,10 +99,10 @@ module Lizarb
       app: $APP,
       mode: $MODE
     }
-    bugs = SPEC.metadata["bug_tracker_uri"]
+    github = "https://github.com/lizarb/lizarb"
     puts versions.to_s.green
-    puts "Report bugs at #{bugs}"
-    puts "Fork us on Github at #{bugs}/fork"
+    puts "Report bugs at #{github}/issues"
+    puts "Fork us on Github at #{github}/fork"
   end
 
   # setup phase
