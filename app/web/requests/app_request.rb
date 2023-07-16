@@ -1,6 +1,7 @@
 # Set up your request controllers per the DSL in http://guides.lizarb.org/controllers/request.html
 
 class AppRequest < Liza::Request
+  part :tag, TagRequestPart
 
 end
 
@@ -16,10 +17,13 @@ __END__
 # view head.html.erb
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= @title || "LizaRB" %></title>
-  <%= render "head_extra" %>
+  <%= metatags %>
+  <title><%= get :title %></title>
+  <%= render :head_extra %>
 </head>
+
+# view head_extra.html.erb
+<!--  -->
 
 # view body.html.erb
 <body>
