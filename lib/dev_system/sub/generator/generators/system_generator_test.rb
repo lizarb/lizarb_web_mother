@@ -1,7 +1,7 @@
-class <%= @name.camelize %>CommandTest < Liza::CommandTest
+class DevSystem::SystemGeneratorTest < DevSystem::GeneratorTest
 
   test :subject_class do
-    assert subject_class == <%= @name.camelize %>Command
+    assert subject_class == DevSystem::SystemGenerator
   end
 
   test :settings do
